@@ -1,0 +1,90 @@
+.navbar {
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    position: sticky;
+    justify-content: left;
+    background-color: white; 
+    font-family: '-apple-system', sans-serif;
+}
+
+.navbar ul {
+    margin: 0px;
+    display: flex;
+    padding-left: 10px;
+    list-style-type: none;
+    justify-content: left;
+}
+
+.navbar li {
+    color: black;
+    font-weight: 400;
+}
+
+.logo-image-container {
+    justify-content: center;
+}
+
+.logo-image-container img {
+    width: 70px; 
+    margin: 20px 5px 17px 20px;
+    transition: all 1s ease;
+}
+
+.logo-image-container img:hover {
+    transform: scale(1.18);
+}
+
+.vending-machine-name {
+    cursor:default;
+    font-size: 42px;
+    margin: 28px 0px 0px 15px;
+}
+
+.vending-machine-name::after {
+    left: 500px;
+    left: 5%;
+    width: 0;
+    height: 1px;
+    content: '';
+    bottom: 30px;
+    margin-left: 195px;
+    position: absolute;
+    background-color: #888888;
+    transform: translateX(-25%);
+    transition: width 0.5s ease, left 0.5s ease;
+}
+
+.vending-machine-name:hover::after {
+    left: 0;
+    width: 310px;
+}
+
+.vending-machine-slogan {
+    font-size: 15px;
+    text-indent: 480px;
+    margin: 50px 0px 0px 15px;
+    transition: all 1s ease-out;
+    display: inline-block;
+    cursor:default;
+}
+
+.vending-machine-slogan::after {
+    left: 0;
+    width: 0;
+    opacity: 0;
+    content: '';
+    height: 1px;
+    bottom: 38px;
+    position: absolute;
+    margin-left: 1030px;
+    transform-origin: right;
+    background-color: #888888;
+    transition: width 0.5s ease-in-out, opacity 0.5s ease-out;
+}
+
+.vending-machine-slogan:hover::after {
+    opacity: 1;
+    width: 62px;
+    transform-origin: left;
+}
