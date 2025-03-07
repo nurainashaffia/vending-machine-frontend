@@ -1,0 +1,234 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-edit {
+  align-items: right;
+  width: 28.5%;
+  height: 52%;
+  cursor: default;
+  text-align: left;
+  border-radius: 7%;
+  padding: 11px 40px;
+  background: white;
+  transition: all 3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-edit h1 {
+  color: black;
+  font-weight: 500;
+}
+
+.form-container {
+  gap: 13px;
+  width: 400px;
+  display: grid;
+  padding-top: 2%;
+  margin: 7px 0px 60px;
+  grid-template-columns: auto 1fr;
+}
+
+.form-container label {
+  font-size: 14px;
+  margin-top: 7px;
+}
+
+.form-container input {
+  width: 100%;
+  height: 18px;
+  font-size: 14px;
+  border-radius: 50px;
+  padding: 5px 5px 5px 10px;
+}
+
+.input-editable {   
+  padding: 8px;
+  border-radius: 5px;
+  transition: all 0.2s ease-out;
+  border: 1px solid #ccc;  
+  background-color: white;
+}
+
+.input-editable::placeholder {
+  color: #555;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.input-editable:focus::placeholder {
+  color: #aaa;
+}
+
+.input-editable:focus {
+  outline: none;
+  border: 1px solid black;  
+  background-color: white;
+}
+
+.dropdown {
+  width: 100%;
+  margin: 0px;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 50%;
+  border-radius: 45px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 7px 8px 7px 10px;
+  background-color: white;
+  transition: all 0.6s ease-out;
+}
+
+.dropdown-content {
+  opacity: 0;
+  z-index: 1;
+  display: none;
+  min-width: 94%;
+  margin-top: 8px;
+  position: absolute;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.dropdown-content.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  font-size: 13px;
+  margin: 6px 6px;
+  padding: 4px 5px 4px 5px;
+}
+
+.dropdown-item:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.capacity-container {
+  gap: 10px;
+  width: 106%;
+  display: flex;
+  align-items: center;
+}
+
+.input-capacity {
+  flex: 1;
+  padding: 8px;
+  height: 35px;
+  max-width: 60%;
+  border-radius: 5px;
+  color: #9b9b9b;
+  border-radius: 5px;         
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;  
+  transition: all 0.2s ease-out;
+}
+
+.restock-btn {
+  width: 40%;
+  height: 32px;
+  color: white;
+  font-size: 13px;
+  margin: 0px 0px;
+  font-weight: 350;
+  border-radius: 90px;
+  background-color: black;
+  border: 1px solid white;
+  transition: all 0.15s ease-out;
+}
+
+.restock-btn:hover {
+  background: rgba(0, 0, 0, 0.725);
+}
+
+.input-disabled {
+  padding: 8px;
+  color: #9b9b9b;
+  border-radius: 5px;         
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;  
+}
+
+.input-changed {
+  color: #565656;
+}
+
+.modal-buttons-edit {
+  float: center;
+  padding: 8px 15px;
+  text-align: center;
+}
+  
+.cancel-btn {
+  width: 100px;
+  height: 45px;
+  color: black;
+  font-size: 14px;
+  font-weight: 350;
+  border-radius: 45px;
+  margin: 0px 7px 6px 7px;
+  transition: all 0.15s ease-out;
+  background-color: rgb(235, 235, 235);
+  border: 1px solid rgb(235, 235, 235);
+}
+
+.save-btn {
+  width: 100px; 
+  height: 45px;
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+  border-radius: 45px;
+  margin: 0px 0px 6px 7px;
+  border: 1px solid white;
+  background-color: black;
+  transition: all 0.15s ease-out;
+}
+
+.clear-btn {
+  width: 100px;
+  height: 45px;
+  color: black;
+  font-size: 14px;
+  font-weight: 350;
+  border-radius: 45px;
+  margin: 0px 7px 6px 0px;
+  transition: all 0.1s ease-out;
+  background-color: white;
+  border: 1px solid black;
+}
+  
+.save-btn:hover {
+  background: rgba(0, 0, 0, 0.725);
+}
+
+.cancel-btn:hover {
+  background-color: rgba(200, 200, 200, 0.667);
+}
+
+.clear-btn:hover {
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+}

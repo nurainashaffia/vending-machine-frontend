@@ -1,13 +1,13 @@
 import './NavBar.css';
-import React from "react";
-import logoImage from "../../images/logo_png.png";
+import { React } from "react";
+import logoImage from "../../images/logo.png";
 
-function NavBar () {
+function NavBarUser () {
     return (
         <nav className="navbar">
             <ul>
                 <div className="logo-image-container">
-                <li><img src={logoImage} style={{}} /></li>
+                <li><img src={logoImage} alt="Logo" /></li>
                 </div>
                 <li className="vending-machine-name">The Nibble Nook</li>
                 <li className="vending-machine-slogan">The Snack Stop, Anytime.</li>
@@ -16,4 +16,4 @@ function NavBar () {
     )
 }
 
-export default NavBar;
+export default NavBarUser;
