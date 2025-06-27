@@ -35,8 +35,8 @@ const EditSlotCardDialog = ({ selectedSlot, setSelectedSlot, isOpen, onSave, onC
     const handleSelectItem = (item) => {
         setSelectedSlot((prevSlot) => ({
             ...prevSlot,
-            itemId: item.itemId, // Ensure itemId is updated
-            itemName: item.itemName, // Also update itemName so UI reflects change
+            itemId: item.itemId, 
+            itemName: item.itemName,
         }));
         setIsItemDropdownOpen(false);
     };
@@ -51,8 +51,8 @@ const EditSlotCardDialog = ({ selectedSlot, setSelectedSlot, isOpen, onSave, onC
     };
 
     return (
-        <div className="modal-overlay">
-            <div className="modal">
+        <div className="modal-overlay-edit">
+            <div className="modal-edit">
                 <h1>Edit Slot</h1>
                 <form className="form-container" onSubmit={(e) => e.preventDefault()}>
                     <label>ID</label>
@@ -95,7 +95,7 @@ const EditSlotCardDialog = ({ selectedSlot, setSelectedSlot, isOpen, onSave, onC
                 </form>
                 <div className="modal-buttons">
                     <button className="cancel-btn" onClick={onCancel}>Cancel</button>
-                    <button className="save-btn" onClick={onSave}>Save</button>
+                    <button type="submit" className="save-btn" onClick={onSave}>Save</button>
                 </div>
             </div>
         </div>

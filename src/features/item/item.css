@@ -1,5 +1,5 @@
 .item-page {
-    padding: 15px;
+    padding: 0px 0px 0px 15px;
     display: flex;
     font-size: 17px; 
     cursor: default;
@@ -15,8 +15,27 @@
 }
 
 .item-page-container td {
-    width: 150px;
+    width: 200px;
     vertical-align: top;
+}
+
+.table-content {
+    width: 90%;
+    padding: 0px 0px 0px 102.5px;
+}
+
+.item-page-container td {
+    width: 200px;
+    vertical-align: top;
+}
+
+.buttons-divider {
+    gap: 10px;
+    display: flex;
+    max-width: 1030px;
+    align-items: right;
+    justify-content: flex-end;
+    padding: 20px 45px 20px 40px;
 }
 
 .item-divider {
@@ -26,6 +45,7 @@
 
 .label {
     font-weight: 400;
+    padding-left: 2px;
 }
 
 .item-list-image-container {
@@ -43,18 +63,99 @@
     width: 100%; 
     height: 100%;
     object-fit: contain;
-    transition: all 0.3s ease-out;
 }
 
-.divider-line {
-    margin: 20px 0px 20px 0px;
-    border: none;
+.item-divider-line {
     height: 1px;
+    border: none;
+    width: 1025px;
+    margin: 20px 0px 20px 0px;
     background-color: rgb(185, 185, 185);
 }
 
 .button-div {
-    padding: 2px 0px 0px 60px;
+    padding: 2px 0px 0px 0px;
+    text-align: right;
+}
+
+.create-item-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+    overflow: hidden;
+    margin-left: 5px;
+    white-space: nowrap;
+    align-items: center;
+    border-radius: 100px;
+    justify-content: center;
+    border: 1px solid black;
+    background-color: black;
+    transition: width 0.5s ease-in-out;
+}
+
+.create-item-btn .btn-text {
+    opacity: 0;
+    width: 0;
+    transition: opacity 0.2s ease-in-out, width 0.3s ease-in-out;
+}
+
+.create-item-btn:hover {
+    width: 160px;
+    cursor: pointer;
+    border-radius: 120px;
+    justify-content: center;
+}
+
+.create-item-btn:hover .btn-text {
+    opacity: 1;
+    width: auto;
+}
+
+.create-item-btn:hover i {
+    display: none;
+}
+
+.create-item-btn:active {
+  background: rgba(0, 0, 0, 0.725);
+}
+
+.search-container {
+    width: 250px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    border-radius: 50px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgb(185, 185, 185);
+}
+
+.search-container:has(input:focus) {
+    outline: none;
+    border: 1px solid black;
+}
+
+.search-input {
+    border: none;
+    height: 28px;
+    width: 140px;
+    padding: 5px;
+    outline: none;
+    color: rgb(77, 77, 77);
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.item-search-icon-btn {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 50px;
+    margin-right: 10px;
+    background: transparent;
 }
 
 .restock-item-btn {
@@ -71,6 +172,7 @@
 }
 
 .restock-item-btn:hover {
+    cursor: pointer;
     background: rgba(0, 0, 0, 0.725);
 }
 
@@ -82,11 +184,180 @@
     font-weight: 300;
     border-radius: 50px;
     margin: 0px 0px 6px 7px;
+    transition: all 0.15s ease-out;
     background-color: rgb(235, 235, 235);
     border: 1px solid rgb(235, 235, 235);
-    transition: all 0.15s ease-out;
 }
   
 .delete-item-btn:hover {
+    cursor: pointer;
     background-color: rgba(200, 200, 200, 0.667);
 }
+
+.item-card {
+    gap: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: rgb(66, 66, 66);
+}
+
+.item-card-header {
+    width: 100%;
+    display: flex;
+    color: black;
+    cursor: default;
+    font-size: 27px;
+    font-weight: 400;
+    justify-content: left;
+    padding: 20px 65px 20px 33px;
+}
+
+.item-card-back {
+    width: 50%;
+    justify-content: left;
+}
+
+.item-back-link {
+    color: black;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+  
+.item-back-link:hover {
+    color: rgba(0, 0, 0, 0.586);
+}
+
+.item-card-section-title {
+    width: 100%;
+    font-size: 20px;
+    cursor: default;
+    text-align: left;
+    font-weight: 400;
+    padding: 15px 16px 10px 65px;
+    margin-bottom: 13px;
+    border-bottom: solid 1px #56565699;
+}
+  
+.item-card-section-details-container {
+    width: 100%;
+    height: 100%;
+    padding: 0px 5.6% 8px 5.4%;
+}
+  
+.item-card-details {
+    font-size: 15px; 
+    cursor: default;
+    text-align: left;
+    font-weight: 300;
+}
+  
+.item-card-details th {
+    height: 32px;
+    vertical-align: middle;
+}
+  
+.item-card-details td {
+    height: 40px;
+    min-width: 150px;
+}
+  
+.item-card-details .label {
+    font-weight: 300;
+}
+  
+.item-card-details .value {
+    padding-left: 50px;
+}
+
+.form-container input {
+    width: 100%;
+    height: 18px;
+    font-size: 14px;
+    border-radius: 50px;
+    padding: 5px 5px 5px 10px;
+}
+
+.input-item {   
+    font-size: 14px;
+    padding: 8px 8px 8px 13px;
+    width: 400px;
+    height: 16px;
+    color: black;
+    border-radius: 100px;
+    border: 1px solid #ccc;  
+    background-color: white;
+    transition: all 0.2s ease-out;
+}
+
+.input-item::placeholder {
+    color: #555;
+    background-color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.input-item:focus::placeholder {
+    color: #aaa;
+}
+  
+.input-item:focus {
+    outline: none;
+    border: 1px solid black;  
+    background-color: white;
+}
+
+.save-button-div {
+    text-align: left;
+    padding: 26px 0px 0px 55px;
+}
+
+.item-save-btn {
+    width: 100px;
+    height: 45px;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 45px;
+    margin: 0px 0px 6px 7px;
+    border: 1px solid white;
+    background-color: black;
+    transition: all 0.15s ease-out;
+}
+    
+.item-save-btn:hover {
+    background: rgba(0, 0, 0, 0.725);
+}
+
+.error-message {
+    color: rgb(255, 0, 0);
+    font-size: 13px;
+    margin-top: 4px;
+    padding-left: 10px;
+}
+
+.custom-toast {
+    width: fit-content;
+    padding: 0px 17px;
+    cursor: default;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 45px;
+    justify-content: center;
+    color: black !important;
+    min-height: 50px !important;
+    background-color: #ffffff !important;
+    font-family: '-apple-system', sans-serif;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.input-item::-webkit-inner-spin-button, 
+.input-item::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+.input-item {
+    -moz-appearance: textfield;
+}
+

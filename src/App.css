@@ -11,10 +11,22 @@
 .vending-machine {
   width: 80%;
   color: #565656;
-  min-height: 100vh;
+  min-height: 88vh;
   justify-content: center;
   padding: 0px 0px 50px 0px;
   background-color: white;
+  font-family: '-apple-system', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-vending-machine {
+  width: 30%;
+  min-height: 60vh;
+  color: #565656;
+  border-radius: 4%;
+  justify-content: justify;
+  background-color: white;
+  padding: 10px 0px 0px 0px;
   font-family: '-apple-system', sans-serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

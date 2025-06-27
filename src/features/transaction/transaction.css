@@ -1,0 +1,112 @@
+.transaction-page {
+    padding: 0px 0px 0px 15px;
+    display: flex;
+    font-size: 17px; 
+    cursor: default;
+    flex-wrap: wrap;
+    text-align: left;
+    font-weight: 300;
+    justify-content: center;
+}
+
+.transaction-page-container {
+    width: 100%;
+    justify-content: left;
+}
+
+.transaction-search-container {
+    width: 250px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    border-radius: 50px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgb(185, 185, 185);
+}
+
+.transaction-search-container:has(input:focus) {
+    outline: none;
+    border: 1px solid black;
+}
+
+.transaction-buttons-divider {
+    gap: 5px;
+    display: flex;
+    max-width: 1030px;
+    align-items: right;
+    justify-content: flex-end;
+    padding: 20px 45px 0px 40px;
+}
+
+.transaction-search-input {
+    border: none;
+    height: 28px;
+    width: 160px;
+    padding: 5px;
+    outline: none;
+    color: rgb(77, 77, 77);
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.transaction-search-icon-btn {
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 30px;
+    margin-right: 10px;
+    background: transparent;
+}
+
+.custom-toast {
+    width: fit-content;
+    padding: 0px 17px;
+    cursor: default;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 45px;
+    justify-content: center;
+    color: black !important;
+    min-height: 50px !important;
+    background-color: #ffffff !important;
+    font-family: '-apple-system', sans-serif;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.transaction-page-container tbody {
+    padding-top: 100px;
+}
+
+.transaction-divider {
+    width: 100%;
+    padding: 0px 45px 0px 40px;
+}
+
+.transaction-divider-line {
+    height: 1px;
+    border: none;
+    width: 1025px;
+    margin: 0px 0px 0px 0px;
+    background-color: rgb(185, 185, 185);
+}
+
+.transaction-page-container td {
+    width: 190px;
+    vertical-align: top;
+}
+
+.id-label-div {
+    padding-top: 30px;
+}
+
+.label {
+    font-weight: 400;
+}
+
+.id-label {
+    font-size: 25px;
+    font-weight: 600;
+}

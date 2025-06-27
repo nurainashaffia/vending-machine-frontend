@@ -132,7 +132,7 @@ const SlotListAdmin = () => {
       });
     } catch (error) {
       console.error('Clear slot error', error);
-      toast.error('Clear slot failed', {
+      toast.error('Failed to clear slot', {
           icon: true,
           autoClose: 3000,
           draggable: true,
@@ -154,7 +154,7 @@ const SlotListAdmin = () => {
   }
 
   return (
-    <div className='vending-machine-slots'> 
+    <div className='vending-machine-slots'>
       {slots.map((slot) => (
         <div key={slot.slotId} className='vending-machine-slot'>
           <div className='button-container'>
@@ -174,6 +174,7 @@ const SlotListAdmin = () => {
           <p className='item-desc-small'><span className="label">Status:&nbsp;</span>
             {slot.slotStatus === 'AVAILABLE' ? 'Available' : 'Out of Service'}
           </p>
+          <p className='item-desc-small'><span className="label">Assigned Item: </span>{slot.itemName === null ? "N/A" : slot.itemName}</p>
           <p className='item-desc-small'><span className="label">Last Restocked: </span>{slot.lastRestocked === null ? "N/A" : slot.lastRestocked}</p>
         </div>
       ))}

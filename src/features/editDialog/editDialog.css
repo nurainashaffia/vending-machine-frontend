@@ -1,4 +1,4 @@
-.modal-overlay {
+.modal-overlay-edit {
   position: fixed;
   top: 0;
   left: 0;
@@ -54,16 +54,16 @@
 
 .input-editable {   
   padding: 8px;
+  color: black;
   border-radius: 5px;
-  transition: all 0.2s ease-out;
   border: 1px solid #ccc;  
   background-color: white;
+  transition: all 0.3s ease-out;
 }
 
 .input-editable::placeholder {
   color: #555;
   background-color: white;
-  transition: all 0.2s ease-in-out;
 }
 
 .input-editable:focus::placeholder {

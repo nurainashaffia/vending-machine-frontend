@@ -10,9 +10,9 @@ import item_07 from "../../images/item-07.png";
 import item_08 from "../../images/item-08.png";
 import item_09 from "../../images/item-09.png";
 import item_10 from "../../images/item-10.png";
-import React, { useState, useEffect, use } from "react";
+import React, { useState, useEffect } from "react";
 import { getSlotFromSlotId } from '../../services/slot/slotService';
-import { getTransactionFromTransactionId, getTransactions } from '../../services/transaction/transactionService';
+import { getTransactionFromTransactionId } from '../../services/transaction/transactionService';
 
 const SlotCard = () => {
     const { slotId } = useParams();
@@ -76,8 +76,7 @@ const SlotCard = () => {
     return (
         <div className='slot-card'> 
             <div className='slot-card-header'>   
-                <div className='slot-card-back'><Link to="/" className='back-link'>&larr; Back to Slots</Link></div>         
-                {/* <div className='slot-card-title'>Slot Details</div>     */}
+                <div className='slot-card-back'><Link to="/slots-admin" className='slot-back-link'>&larr; Back to Slots</Link></div>   
             </div>       
             <div className='slot-card-section-title'>Slot</div>
             <div className='slot-card-section-details-container'>
@@ -110,6 +109,10 @@ const SlotCard = () => {
                             <td><span className="value">{slot?.itemId}</span></td>
                         </tr>
                         <tr>
+                            <td><span className="label">Stock</span></td>
+                            <td><span className="value">{slot?.itemStock}</span></td>
+                        </tr>
+                        <tr>
                             <td><span className="label">Price</span></td>
                             <td><span className="value">${slot?.itemPrice.toFixed(2)}</span></td>
                         </tr>
@@ -120,9 +123,6 @@ const SlotCard = () => {
                     </table>
                 ) : <p className='slot-card-details' style={{ paddingLeft:"3px" }}>N/A</p>
                 }
-                {/* <div className='slot-card-image-container'>
-                    <img className='item-image' src={itemImage[slot?.slotId] || defaultImage} alt="Item" />
-                </div> */}
             </div>
 
             <div className='slot-card-section-title'>Transaction History</div>
@@ -139,7 +139,7 @@ const SlotCard = () => {
                         {transactions.map((t) => (
                             <tr key={t.transactionId}>
                                 <td><span className="value-transaction-id">{t.transactionId}</span></td>
-                                <td><span className="value-transaction-date">{new Date(t.transactionDate).toLocaleString()}</span></td>
+                                <td><span className="value-transaction-date">{t.transactionDate}</span></td>
                             </tr>
                         ))}
                     </tbody>

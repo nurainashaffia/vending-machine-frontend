@@ -4,14 +4,14 @@
     z-index: 1000;
     position: sticky;
     justify-content: left;
-    background-color: white; 
+    background-color: white;
     font-family: '-apple-system', sans-serif;
 }
 
 .navbar ul {
     margin: 0px;
     display: flex;
-    padding-left: 10px;
+    padding-left: 7px;
     list-style-type: none;
     justify-content: left;
 }
@@ -63,9 +63,9 @@
 .vending-machine-slogan {
     cursor: default;
     font-size: 15px;
-    text-indent: 460px;
+    text-indent: 400px;
     display: inline-block;
-    margin: 50px 0px 0px 15px;
+    margin: 53px 0px 0px 15px;
     transition: all 1s ease-out;
 }
 
@@ -75,9 +75,9 @@
     opacity: 0;
     content: '';
     height: 1px;
-    bottom: 38px;
+    bottom: 35px;
     position: absolute;
-    margin-left: 1040px;
+    margin-left: 978px;
     transform-origin: right;
     background-color: #888888;
     transition: width 0.5s ease-in-out, opacity 0.5s ease-out;
@@ -93,7 +93,28 @@
     cursor: default;
     text-indent: 350px;
     display: inline-block;
-    margin: 53px 0px 0px 15px;
+    margin: 53px 0px 0px -20px;
+}
+
+.vending-machine-logout {
+    color: #000;
+    cursor: pointer;
+    font-size: 15px;
+    text-indent: 20px;
+    display: inline-block;
+    margin: 53px 70px 0px 0px;
+    text-decoration: none !important;
+}
+
+.user-menu-logout {
+    color: black;
+    margin-top: 0px;
+    text-decoration: none;
+    transition: all 0.4s ease-out;
+}
+
+.user-menu-logout:hover {
+    margin-top: 5px;
 }
 
 .vending-machine-menu {
@@ -121,4 +142,16 @@
     color: black;
     padding-bottom: 3px;
     border-bottom: 1px solid black;
+}
+
+.menu-link-logout {
+    color: black;
+    margin-top: 0px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.4s ease-out;
+}
+
+.menu-link-logout:hover {
+    margin-top: 5px;
 }

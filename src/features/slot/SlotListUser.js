@@ -21,6 +21,7 @@ const SlotListUser = () => {
   const [loading, setLoading] = useState(true);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [selectedSlot, setSelectedSlot] = useState(null);
+  const [animatingSlotId, setAnimatingSlotId] = useState(null);
   const defaultImage = item_10; 
   const itemImage = {
     53: item_01,
@@ -57,7 +58,11 @@ const SlotListUser = () => {
   const confirmCheckout = async (itemId, slotId) => {
     try {
       await saveTransaction(itemId, slotId);  
-      toast.success('Successfully checked out!', {
+      setAnimatingSlotId(slotId);
+      setTimeout(() => {
+        setAnimatingSlotId(null);
+
+        toast.success('Item dispensed successfully. Enjoy your purchase!', {
         icon: false,
         autoClose: 3000,
         draggable: true,
@@ -67,7 +72,8 @@ const SlotListUser = () => {
         hideProgressBar: true,
         position: "bottom-left",
         className: "custom-toast"
-      });
+      })
+      }, 2300);
     } catch (error) {
       console.error('Checkout error', error);
       setError('Error checking out.');
@@ -97,12 +103,30 @@ const SlotListUser = () => {
       {slots.map((slot) => (
         <div key={slot.slotId} className='vending-machine-slot'>
           <div className='vending-machine-image-container'>
-            <img src={itemImage[slot?.slotId] || defaultImage} alt="Item" />
+            <img
+              className={
+                animatingSlotId === slot.slotId ? "drop-bounce-then-fade" : ""
+              }
+              src={itemImage[slot?.slotId] || defaultImage}
+              alt="Item"
+            />
           </div>
           <p className='item-desc-big'>{slot.itemName === null ? "N/A" : slot.itemName}</p>
           <p className='item-desc-medium'>${slot.itemPrice.toFixed(2)}</p>
-          <button className='checkout-button' onClick={() => openDialog(slot)} disabled={slot.slotStatus === 'OUT_OF_SERVICE' || slot.itemId === null}>
-            {slot.slotStatus === 'OUT_OF_SERVICE' ? 'Out of Service' : 'Checkout >'}
+          <button
+            className='checkout-button'
+            onClick={() => openDialog(slot)}
+            disabled={
+              slot.slotStatus === 'OUT_OF_SERVICE' ||
+              slot.itemId === null ||
+              slot.capacity < 1
+            }
+          >
+            {slot.slotStatus === 'OUT_OF_SERVICE'
+              ? 'Out of Service'
+              : slot.capacity < 1
+              ? 'Out of Stock'
+              : 'Checkout >'}
           </button>          
         </div>
       ))}

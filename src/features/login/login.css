@@ -1,0 +1,142 @@
+.login-page {
+    display: flex;
+    color: black;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-container select, .login-container button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.login-container button {
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.form-input {
+    width: 100%;
+    margin-left: 60px;
+}
+
+.logo-image-container-login {
+    justify-content: center;
+}
+
+.logo-image-container-login img {
+    width: 70px;
+    margin: 48px 0px -15px 0px;
+}
+
+.login-title {
+    font-size: 30px;
+    cursor: default;
+    font-weight: 300;
+}
+  
+.role-selection {
+    gap: 13px;
+    display: flex;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.role-box {
+    width: 160px;
+    color: black;
+    cursor: pointer;
+    padding: 12px 12px;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    transition: border 0.5s ease-in-out;
+}
+
+.role-box:hover {
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+.role-box.active {
+    color: black;
+    border-bottom: 1px solid black;
+}
+  
+.admin-login-container {
+    gap: 0px;
+    width: 79%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 0px 0px;
+}
+
+.login-input {
+    width: 100%;
+    color: #333;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 50px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-input:focus {
+    outline: none;
+    border-color: black;
+}
+
+.login-button {
+    width: 86%;
+    border: none;
+    color: white;
+    font-size: 15px;
+    padding: 15px 0px;
+    border-radius: 50px;
+    margin: 10px 0px 17px 0px;
+    background-color: black;
+    transition: background-color 0.3s;
+}
+
+.login-button:disabled {
+    cursor: not-allowed;
+    background-color: #cccccc;
+}
+
+.login-button:hover:not(:disabled) {
+    background: rgba(0, 0, 0, 0.725);
+}
+
+.error-container {
+    height: 18px;
+    position: relative;
+    margin: 4px 0px 10px 0px;
+}
+
+.error-message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 12px;
+    transition: opacity 0.9s ease;
+}
+
+.error-message.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.error-message.visible {
+    opacity: 1;
+    font-size: 12px;
+    color: #b94a48;
+    visibility: visible;
+}
