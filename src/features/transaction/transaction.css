@@ -1,5 +1,4 @@
 .transaction-page {
-    padding: 0px 0px 0px 15px;
     display: flex;
     font-size: 17px; 
     cursor: default;
@@ -7,6 +6,7 @@
     text-align: left;
     font-weight: 300;
     justify-content: center;
+    padding: 0px 0px 0px 15px;
 }
 
 .transaction-page-container {
@@ -61,12 +61,12 @@
 }
 
 .custom-toast {
-    width: fit-content;
-    padding: 0px 17px;
     cursor: default;
     font-size: 13px;
     font-weight: 400;
+    padding: 0px 17px;
     text-align: center;
+    width: fit-content;
     border-radius: 45px;
     justify-content: center;
     color: black !important;

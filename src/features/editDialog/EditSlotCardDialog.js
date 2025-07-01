@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
 import "./editDialog.css";
 import { useState } from "react";
+import { useEffect } from "react";
 import { getItems } from "../../services/item/itemService";
 
 const statusOptions = ["AVAILABLE", "OUT_OF_SERVICE"];

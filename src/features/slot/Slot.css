@@ -295,7 +295,7 @@
 @keyframes fadeOutAfterDelay {
   0% {
     opacity: 1;
-    transform: translateY(100px); /* match final bounce position */
+    transform: translateY(100px);
   }
   100% {
     opacity: 0;
@@ -306,7 +306,7 @@
 .drop-bounce-then-fade {
   animation:
     dropAndBounce 1.2s ease-out forwards,
-    fadeOutAfterDelay 0.9s ease-out 1.4s forwards; /* starts after bounce ends */
+    fadeOutAfterDelay 0.9s ease-out 1.4s forwards;
   position: relative;
   z-index: 2;
 }

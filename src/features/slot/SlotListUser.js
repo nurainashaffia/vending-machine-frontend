@@ -1,5 +1,6 @@
 import './Slot.css';
 import { toast } from 'react-toastify';
+import { useState, useEffect } from 'react';
 import item_01 from "../../images/item-01.png";
 import item_02 from "../../images/item-02.png";
 import item_03 from "../../images/item-03.png";
@@ -10,7 +11,6 @@ import item_07 from "../../images/item-07.png";
 import item_08 from "../../images/item-08.png";
 import item_09 from "../../images/item-09.png";
 import item_10 from "../../images/item-10.png";
-import React, { useState, useEffect } from 'react';
 import { getSlots } from '../../services/slot/slotService.js';
 import ConfirmDialog from "../checkoutDialog/CheckoutDialog.js";
 import { saveTransaction } from '../../services/transaction/transactionService.js';
@@ -24,15 +24,15 @@ const SlotListUser = () => {
   const [animatingSlotId, setAnimatingSlotId] = useState(null);
   const defaultImage = item_10; 
   const itemImage = {
-    53: item_01,
-    58: item_02,
-    202: item_03,
-    252: item_04,
-    402: item_05,
-    403: item_06,
-    404: item_07,
-    405: item_08,
-    552: item_09
+    1: item_01,
+    2: item_02,
+    3: item_03,
+    4: item_04,
+    5: item_05,
+    6: item_06,
+    7: item_07,
+    8: item_08,
+    9: item_09
   }
 
   useEffect(() => {

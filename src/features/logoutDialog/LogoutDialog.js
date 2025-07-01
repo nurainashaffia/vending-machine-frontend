@@ -1,5 +1,4 @@
-import React from "react";
-import "./logoutDialog.css";
+import './logoutDialog.css';
 
 const LogoutDialog = ({ message, isOpen, onConfirm, onCancel }) => {
     if (!isOpen) return null;

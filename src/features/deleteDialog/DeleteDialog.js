@@ -1,4 +1,3 @@
-import React from "react";
 import "./deleteDialog.css";
 
 const DeleteDialog = ({ message, isOpen, onConfirm, onCancel }) => {

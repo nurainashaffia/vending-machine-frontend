@@ -1,5 +1,5 @@
 import './NavBar.css';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import logoImage from "../../images/logo.png";
 import { useNavigate } from 'react-router-dom';
 import LogoutDialog from '../logoutDialog/LogoutDialog';

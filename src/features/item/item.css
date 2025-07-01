@@ -144,9 +144,9 @@
     width: 140px;
     padding: 5px;
     outline: none;
-    color: rgb(77, 77, 77);
     font-size: 14px;
     margin-left: 10px;
+    color: rgb(77, 77, 77);
 }
 
 .item-search-icon-btn {
@@ -234,8 +234,8 @@
     cursor: default;
     text-align: left;
     font-weight: 400;
-    padding: 15px 16px 10px 65px;
     margin-bottom: 13px;
+    padding: 15px 16px 10px 65px;
     border-bottom: solid 1px #56565699;
 }
   
@@ -280,12 +280,12 @@
 
 .input-item {   
     font-size: 14px;
-    padding: 8px 8px 8px 13px;
     width: 400px;
     height: 16px;
     color: black;
     border-radius: 100px;
     border: 1px solid #ccc;  
+    padding: 8px 8px 8px 13px;
     background-color: white;
     transition: all 0.2s ease-out;
 }
@@ -336,11 +336,11 @@
 }
 
 .custom-toast {
-    width: fit-content;
-    padding: 0px 17px;
     cursor: default;
     font-size: 13px;
     font-weight: 400;
+    padding: 0px 17px;
+    width: fit-content;
     text-align: center;
     border-radius: 45px;
     justify-content: center;
@@ -351,8 +351,7 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.input-item::-webkit-inner-spin-button, 
-.input-item::-webkit-outer-spin-button { 
+.input-item::-webkit-inner-spin-button, .input-item::-webkit-outer-spin-button { 
     -webkit-appearance: none; 
     margin: 0; 
 }

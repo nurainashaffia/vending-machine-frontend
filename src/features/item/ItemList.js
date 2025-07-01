@@ -27,15 +27,15 @@ const ItemList = () => {
     const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
     const [restockDialogOpen, setRestockDialogOpen] = useState(false);
     const itemImage = {
-        2: item_01,
-        3: item_02,
-        6: item_03,
-        7: item_04,
-        8: item_05,
-        9: item_06,
-        10: item_07,
-        11: item_08,
-        17: item_09
+        1: item_01,
+        2: item_02,
+        3: item_03,
+        4: item_04,
+        5: item_05,
+        6: item_06,
+        7: item_07,
+        8: item_08,
+        9: item_09
     }
 
     useEffect(() => {

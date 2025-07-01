@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8080/api/slots';
+const API_URL = 'https://the-nibble-nook.onrender.com/api/slots';
 
 export const getSlots = async () => {
     try {

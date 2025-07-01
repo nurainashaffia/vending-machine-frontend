@@ -1,5 +1,5 @@
 import "./restockDialog.css";
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const RestockDialog = ({ selectedItem, setSelectedItem, isOpen, onSave, onCancel }) => {
     const [newStock, setNewStock] = useState("");

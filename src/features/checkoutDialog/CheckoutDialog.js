@@ -1,4 +1,3 @@
-import React from "react";
 import "./checkoutDialog.css";
 
 const CheckoutDialog = ({ message, isOpen, onConfirm, onCancel }) => {

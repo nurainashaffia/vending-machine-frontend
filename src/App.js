@@ -1,5 +1,4 @@
 import './App.css';
-import React from 'react';
 import Footer from './features/footer/footer';
 import Login from './features/login/LoginCard';
 import 'react-toastify/dist/ReactToastify.css';

@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8080/api/items';
+const API_URL = 'https://the-nibble-nook.onrender.com/api/items';
 
 export const createItem = async (item) => {
     try {
@@ -13,7 +13,7 @@ export const createItem = async (item) => {
             throw new Error('Failed to create new item.');
         }
 
-        return await response.json;
+        return await response.json();
     } catch (error) {
         throw error;
     }
@@ -34,7 +34,7 @@ export const getItems = async () => {
 
 export const searchItems = async (itemName) => {
     try {
-        const response = await fetch(`${API_URL}/search?itemName=${itemName}`);
+        const response = await fetch(`${API_URL}/search?itemName=${encodeURIComponent(itemName)}`);
         if (!response.ok) {
             throw new Error('Failed to search items.');
         }

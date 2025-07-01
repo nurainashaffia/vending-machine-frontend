@@ -1,39 +1,16 @@
 import './Slot.css';
+import { useState, useEffect } from "react";
 import { useParams, Link } from 'react-router-dom';
-import item_01 from "../../images/item-01.png";
-import item_02 from "../../images/item-02.png";
-import item_03 from "../../images/item-03.png";
-import item_04 from "../../images/item-04.png";
-import item_05 from "../../images/item-05.png";
-import item_06 from "../../images/item-06.png";
-import item_07 from "../../images/item-07.png";
-import item_08 from "../../images/item-08.png";
-import item_09 from "../../images/item-09.png";
-import item_10 from "../../images/item-10.png";
-import React, { useState, useEffect } from "react";
 import { getSlotFromSlotId } from '../../services/slot/slotService';
 import { getTransactionFromTransactionId } from '../../services/transaction/transactionService';
 
 const SlotCard = () => {
-    const { slotId } = useParams();
-    const { transactionId } = useParams();
-    const [ error, setError ] = useState(null);
-    const [ slot, setSlot ] = useState(null);
+    const {slotId} = useParams();
+    const [slot, setSlot] = useState(null);
+    const [error, setError] = useState(null);
     const [transactions, setTransactions] = useState([]);
 
     const [ loading, setLoading ] = useState(false);
-    const defaultImage = item_10;
-    const itemImage = {
-        53: item_01,
-        58: item_02,
-        202: item_03,
-        252: item_04,
-        402: item_05,
-        403: item_06,
-        404: item_07,
-        405: item_08,
-        552: item_09
-    }
 
     useEffect(() => {
         const fetchSlot = async () => {

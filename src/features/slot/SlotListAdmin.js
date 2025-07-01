@@ -28,15 +28,15 @@ const SlotListAdmin = () => {
   const [clearSlotOpen, setClearSlotOpen] = useState(false);
   const defaultImage = item_10;
   const itemImage = {
-    53: item_01,
-    58: item_02,
-    202: item_03,
-    252: item_04,
-    402: item_05,
-    403: item_06,
-    404: item_07,
-    405: item_08,
-    552: item_09
+    1: item_01,
+    2: item_02,
+    3: item_03,
+    4: item_04,
+    5: item_05,
+    6: item_06,
+    7: item_07,
+    8: item_08,
+    9: item_09
   };
 
   useEffect(() => {

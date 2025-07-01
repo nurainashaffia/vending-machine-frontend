@@ -1,11 +1,11 @@
 .modal-overlay-edit {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 1000;
   display: flex;
+  position: fixed;
   font-size: 16px;
   align-items: center;
   justify-content: center;
@@ -13,12 +13,12 @@
 }
 
 .modal-edit {
-  align-items: right;
   width: 28.5%;
   height: 52%;
   cursor: default;
   text-align: left;
   border-radius: 7%;
+  align-items: right;
   padding: 11px 40px;
   background: white;
   transition: all 3s ease;
