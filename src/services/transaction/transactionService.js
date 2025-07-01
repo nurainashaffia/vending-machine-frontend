@@ -1,4 +1,4 @@
-const API_URL = 'https://api.the-nibble-nook.onrender.com/transactions';
+const API_URL = 'https://api-the-nibble-nook.onrender.com/transactions';
 
 export const saveTransaction = async (itemId, slotId) => {
     try {
