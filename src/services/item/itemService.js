@@ -1,4 +1,4 @@
-const API_URL = 'https://the-nibble-nook.onrender.com/api/items';
+const API_URL = 'https://api.the-nibble-nook.onrender.com/items';
 
 export const createItem = async (item) => {
     try {
